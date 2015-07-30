@@ -75,7 +75,7 @@ Bridge.prototype.update = function(opts, callback) {
     
     var bufferSize = 256;
     if (opts.bufferSize !== undefined) {
-        bufferSize = opts.bufferSize;
+        bufferSize = +opts.bufferSize;
     }
     this._map = mapnikPool.fromString(this._xml,
         { size: 256, bufferSize: bufferSize },
